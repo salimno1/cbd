@@ -260,7 +260,7 @@ iframe {
     gap: 10px;
   }
   .overlay p {
-    margin-top: 500px;
+    margin-top: 700px;
     background-color: white;
     font-size: 12px;
     border-radius: 20px;
@@ -386,9 +386,10 @@ iframe {
   }
 
   .leftText {
-    margin-top: 150px;
+    margin-top: 50px;
   }
   .join {
+    margin-top: 300px;
     padding: 100px 25px 0px 25px;
     text-align: center;
     height: 150vh;
