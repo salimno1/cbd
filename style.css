@@ -3,7 +3,63 @@
   font-family: "Quicksand", sans-serif;
   margin: 0;
 }
+.bubble {
+  position: fixed;
+  display: flex;
+  width: 100px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999; /* Ensure it's on top of other elements */
+  animation: float 5s infinite; /* Adding floating animation */
+}
+#clippy-container {
+}
 
+#clippy {
+  width: 100px; /* Adjust size as needed */
+  cursor: pointer;
+}
+
+#clippy-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999; /* Ensure it's on top of other elements */
+}
+
+#clippy img {
+  width: 100px; /* Adjust size as needed */
+  cursor: pointer;
+}
+
+.speech-bubble {
+  position: absolute;
+  top: -90px;
+  right: 120%;
+  background-color: #c71414;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 200px;
+  z-index: 1; /* Ensure it's above the Clippy image */
+  color: white;
+  border: 1px solid white;
+}
+
+.speech-bubble p {
+  margin: 0;
+  font-size: 12px;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
 .banner {
   height: 100vh;
   background-color: #000;
@@ -62,6 +118,7 @@
   border: 4px solid black;
   padding: 10px;
   color: black;
+  z-index: 10;
 }
 
 .overlay i {
@@ -92,8 +149,9 @@ i:hover {
 .rightBox {
   position: fixed;
   top: 30%;
+  right: 20px;
   height: 200px;
-  width: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,10 +204,16 @@ h1:hover {
   background-color: #000;
 }
 .storyText {
+  padding-top: 200px;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
   background-color: black;
   color: white;
+}
+.storyText img {
+  height: 500px;
 }
 
 .storyText p {
@@ -232,6 +296,13 @@ iframe {
     display: flex;
   }
 
+  .cto {
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    width: 125px;
+    border-radius: 10px;
+  }
+
   .top {
     height: 10%;
     width: 100%;
@@ -247,7 +318,7 @@ iframe {
   }
   .center img {
     height: 100vh;
-    width: 60%;
+    width: 100%;
   }
   .lower {
     height: 10%;
@@ -269,13 +340,14 @@ iframe {
     gap: 10px;
   }
   .overlay p {
-    margin-top: 700px;
+    margin-top: 500px;
     background-color: white;
     font-size: 12px;
     border-radius: 20px;
     border: 4px solid black;
     padding: 10px;
     color: black;
+    z-index: 1222;
   }
 
   .overlay i {
@@ -308,7 +380,7 @@ iframe {
     top: 30%;
 
     height: 200px;
-    width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -363,11 +435,16 @@ iframe {
   }
   .storyText {
     padding: 10px;
+    font-size: 12px;
     text-align: center;
     display: flex;
     align-items: center;
     background-color: black;
     color: white;
+  }
+  .storyText img {
+    height: 400px;
+    width: 100%;
   }
 
   .storyText p {
@@ -398,7 +475,7 @@ iframe {
     margin-top: 50px;
   }
   .join {
-    margin-top: 300px;
+    margin-top: 200px;
     padding: 100px 25px 0px 25px;
     text-align: center;
     height: 150vh;
